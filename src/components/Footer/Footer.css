@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    align-items: center;
+    margin: -0.5rem -3.5rem;
+    margin-top: -7rem;
+    position: relative;
+}
+
+.f-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    color: white;
+    gap: 2rem;
+}
+
+.f-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.f-content > :nth-child(1) > :nth-child(1) {
+    font-weight:500;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.f-content > :nth-child(1) > :nth-child(1):hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+      .f-icons {
+        transform: scale(0.8);
+        margin-top: -1rem;
+    }
+}
+
+

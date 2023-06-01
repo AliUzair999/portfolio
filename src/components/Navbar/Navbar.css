@@ -1,0 +1,117 @@
+.n-wrapper {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.n-left {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.n-name {
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+
+
+.n-right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.n-list {
+    flex: 10;
+}
+
+.n-list>ul {
+    display: flex;
+    gap: 2rem;
+    margin-right: 4em;
+}
+
+.n-list>ul :hover {
+    cursor: pointer;
+    color: var(--orange);
+}
+
+n-button {
+    flex: 2;
+}
+
+@media screen and (max-width: 480px) {
+    .n-list {
+        display: none;
+    }
+    .n-button {
+        display: none;
+    }
+
+    .n-wrapper.active {
+        height: 14vh;
+        margin-left: -0.5rem;
+    }
+
+    /* .n-wrapper.active > div > div {
+        color: white;
+    } */
+
+}
+
+
+.n-wrapper.active {
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--orange);
+    box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
+    margin-left: -3.5rem;
+}
+ul
+.n-wrapper.active button {
+    background: white;
+    color: var(--black);
+}
+
+
+.n-wrapper.active>div>div>ul :hover {
+    color: white;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .n-list {
+        display: none;
+    }
+
+    .n-button {
+        display: none;
+    }
+
+    .n-wrapper.active {
+        height: 8vh;
+        margin-left: -0.5rem;
+    }
+
+    /* .n-wrapper.active > div > div {
+            color: white;
+        } */
+
+}
+
+@media screen and (min-width: 480px) {
+    .n-wrapper.active {
+        height: 10vh;
+        margin-left: -3.5rem;
+    }
+}

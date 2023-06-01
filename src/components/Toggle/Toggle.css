@@ -1,0 +1,44 @@
+.toggle {
+    display: flex;
+    justify-content: space-around;
+    border: 3px solid var(--orange);
+    border-radius: 1rem;
+    padding: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle > * {
+    width: 1rem;
+    height: 1rem;
+    color: var(--orange) ;
+}
+
+.t-button {
+    border-radius: 100%;
+    background: var(--orange);
+    position: absolute;
+}
+
+.toggle.active {
+    border: 3px solid var(--black);
+}
+
+.toggle.active > * {
+    color: var(--black) ;
+}
+
+.toggle.active div:nth-of-type(1) {
+    background: var(--black);
+}
+
+@media screen and (max-width: 480px) {
+    .toggle{
+        /* display: flex; */
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+    }
+}
+
+
