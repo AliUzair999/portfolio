@@ -12,7 +12,7 @@
     font-weight: bold;
 }
 
-.portfolio span:nth-child(2) {
+.port-head {
     color: var(--orange);
     font-size: 2.5rem;
     font-weight: bold;
@@ -27,6 +27,7 @@
 .portfolio-slider {
     margin-top: 3rem;
     width: 100%;
+    text-align: center;
 }
 
 .portfolio-slider .swiper-slide {
@@ -37,6 +38,21 @@
     width: 19rem;
     filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
     border-radius: 19px;
+    margin-bottom: 10px;
+}
+
+.portfolio-text {
+    text-align: center;
+    color: var(--orange);
+    font-weight: bold;
+    margin-top: 100px;
+    font-size: 1.2rem;
+    margin-top: 20vh;
 }
 
 
+@media screen and (max-width: 480px) {
+    .portfolio-text {
+        display: none;
+    }
+}
