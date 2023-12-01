@@ -2,7 +2,7 @@ import React from "react";
 import './Footer.css'
 import Wave from "../../img/wave.png"
 import Linkedin from "@iconscout/react-unicons/icons/uil-linkedin"
-import Facebook from "@iconscout/react-unicons/icons/uil-facebook"
+// import Facebook from "@iconscout/react-unicons/icons/uil-facebook"
 import Github from "@iconscout/react-unicons/icons/uil-github"
 import { UilPhoneAlt } from '@iconscout/react-unicons'
 
@@ -19,13 +19,13 @@ const Footer = () => {
                     </a>
                 </span>
                 <div className="f-icons">
-                    <a href="https://github.com/AliUzair999" target="_blank">
+                    <a href="https://github.com/AliUzair999" target="_blank" rel="noreferrer">
                         <Github color='white' size='3rem' />
                     </a>
-                    <a href="https://www.linkedin.com/in/ali-uzair/" target="_blank">
+                    <a href="https://www.linkedin.com/in/ali-uzair/" target="_blank" rel="noreferrer">
                         <Linkedin color='white' size='3rem' />
                     </a>
-                    <a href="tel:+923412445322" target="_blank">
+                    <a href="tel:+923412445322" target="_blank" rel="noreferrer">
                         <UilPhoneAlt color='white' size='3rem' />
                     </a>
                 </div>

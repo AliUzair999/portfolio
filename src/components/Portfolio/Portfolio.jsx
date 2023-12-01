@@ -1,110 +1,151 @@
 import React from "react";
-import "./Portfolio.css"
-import { Swiper, SwiperSlide } from "swiper/react"
+import "./Portfolio.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import SwiperCore, { Autoplay } from 'swiper';
 import Olx from "../../img/olx.png";
+import AntD from "../../img/portfolio/AntD.PNG";
+import Customers from "../../img/portfolio/Dashboard.png";
+import Gatsby from "../../img/portfolio/Gatsby.PNG";
 import Elo from "../../img/elo.png";
-import realEstate from '../../img/portfolio/realEstate.PNG'
-import LuckyDraw from '../../img/portfolio/luckyDraw.PNG'
-import chatApp from '../../img/portfolio/chatApp.PNG'
+import realEstate from "../../img/portfolio/realEstate.PNG";
+import LuckyDraw from "../../img/portfolio/luckyDraw.PNG";
+import chatApp from "../../img/portfolio/chatApp.PNG";
 import Food from "../../img/food.png";
 import Reume from "../../img/portfolio.png";
-import "swiper/css";
 
-import { themeContext } from '../../Context';
-import { useContext } from 'react';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
+
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const Portfolio = () => {
-    const theme = useContext(themeContext)
-    const darkMode = theme.state.darkMode
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
-    const urls= ["https://elo-app.netlify.app/", "https://ad-posting-app.netlify.app/", "https://github.com/AliUzair999", "https://restaurant-app-uzair.netlify.app/"]
+  // const urls= ["https://elo-app.netlify.app/", "https://ad-posting-app.netlify.app/", "https://github.com/AliUzair999", "https://restaurant-app-uzair.netlify.app/"]
 
-    const data = [
-        {
-            name: "elo",
-            img: Elo,
-            gitLink: "https://github.com/AliUzair999/elo-app",
-            liveLink: "https://elo-app.netlify.app/",
-        },
-    ]
-    return (
-        <div className="portfolio" id="Portfolio">
+  const slides = [
+    {
+      name: "Gatsby",
+      img: Gatsby,
+      link: "https://uzair-gatsby.netlify.app/",
+      desc: "Gatsby Project",
+    },
+    {
+      name: "Dashboard",
+      img: Customers,
+      link: "https://uzair-strugbits.netlify.app/",
+      desc: "Admin Dashboard",
+    },
+    {
+      name: "Ant Design",
+      img: AntD,
+      link: "https://uzair-antd.netlify.app/",
+      desc: "Ant Design",
+    },
+    {
+      name: "realEstate",
+      img: realEstate,
+      link: "https://uzair-real-estate.netlify.app/",
+      desc: "Real Estate",
+    },
+    {
+      name: "Elo",
+      img: Elo,
+      link: "https://elo-app.netlify.app/",
+      desc: "Ecommerce App",
+    },
+    {
+      name: "LuckyDraw",
+      img: LuckyDraw,
+      link: "https://uzair-luckydraw.netlify.app/",
+      desc: "Luckydraw App",
+    },
+    {
+      name: "chatApp",
+      img: chatApp,
+      link: "https://drive.google.com/file/d/1sONVI6pWA8FXlNmJVbptxCUZAHE5K3Nq/view?usp=sharing",
+      desc: "Chat App",
+    },
+    {
+      name: "Portfolio",
+      img: Reume,
+      link: "https://github.com/AliUzair999/portfolio",
+      desc: "Portfolio",
+    },
+    {
+      name: "Food App",
+      img: Food,
+      link: "https://restaurant-app-uzair.netlify.app/",
+      desc: "Food Ordering",
+    },
+  ];
 
-            {/* HEADING */}
-            <span style={darkMode ? { color: "white" } : { color: "" }} >Recent Project</span>
-            <span className="port-head">Portfolio</span>
+  // SwiperCore.use([Autoplay]);
 
-            {/* SLIDER */}
+  return (
+    <div className="portfolio" id="Portfolio">
+      {/* HEADING */}
+      <span style={darkMode ? { color: "white" } : { color: "" }}>
+        Recent Project
+      </span>
+      <span className="port-head">Portfolio</span>
 
-            <Swiper
-                spaceBetween={30}
-                slidesPerView={3}
-                grabCursor={true}
-                className="portfolio-slider"
-            >
-                <SwiperSlide>                   
-                        <img src={realEstate} alt="realEstate" onClick={() => {
-                        window.open('https://uzair-real-estate.netlify.app/', '_blank');
-                    }}/>
-                    <span className="portfolio-text">
-                        Real Estate
-                    </span>
-                </SwiperSlide>
-                
-                <SwiperSlide>                   
-                        <img src={Elo} alt="Elo" onClick={() => {
-                        window.open('https://elo-app.netlify.app/', '_blank');
-                    }}/>
-                     <span className="portfolio-text">
-                        Ecommerce App
-                    </span>
-                </SwiperSlide>
-                <SwiperSlide>                   
-                        <img src={LuckyDraw} alt="LuckyDraw" onClick={() => {
-                        window.open('https://uzair-luckydraw.netlify.app/', '_blank');
-                    }}/>
-                     <span className="portfolio-text">
-                        Luckydraw App
-                    </span>
-                </SwiperSlide>
-                <SwiperSlide>                   
-                        <img src={chatApp} alt="chatApp" onClick={() => {
-                        window.open('https://drive.google.com/file/d/1sONVI6pWA8FXlNmJVbptxCUZAHE5K3Nq/view?usp=sharing', '_blank');
-                    }}/>
-                     <span className="portfolio-text">
-                        Chat App
-                    </span>
-                </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
-                    <img src={Olx} alt="Olx" onClick={() => {
-                        window.open('https://ad-posting-app.netlify.app/', '_blank');
-                    }}/>
-                     <span className="portfolio-text">
-                        OLX
-                    </span>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={Reume} alt="Portfolio" onClick={() => {
-                        window.open('https://github.com/AliUzair999/portfolio', '_blank');
-                    }}/>
-                     <span className="portfolio-text">
-                        Portfolio
-                    </span>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={Food} alt="Food" onClick={() => {
-                        window.open('https://restaurant-app-uzair.netlify.app/', '_blank');
-                    }}/>
-                     <span className="portfolio-text">
-                        Food Ordering
-                    </span>
-                </SwiperSlide>
-                
+      {/* SLIDER */}
 
-            </Swiper>
-        </div>
-    )
-}
+      <Swiper
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }}
+        spaceBetween={30}
+        
+        grabCursor={true}
+        className="portfolio-slider"
+        // centeredSlides={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        // pagination={{
+        // clickable: true,
+        // }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation, Scrollbar]}
+        scrollbar={{ draggable: true }}
+        keyboard={{ enabled: true }}
+        direction="horizontal"
+      >
+        {slides.map((item, index) => {
+          return (
+            <SwiperSlide>
+              <img
+                src={item.img}
+                alt={item.name}
+                onClick={() => {
+                  window.open(item.link, "_blank");
+                }}
+              />
+              <span className="portfolio-text">{item.desc}</span>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </div>
+  );
+};
 
-export default Portfolio
-
+export default Portfolio;

@@ -7,18 +7,18 @@ import Facebook from '../../img/Facebook.png'
 
 import Vector1 from '../../img/Vector1.png'
 import Vector2 from '../../img/Vector2.png'
-import boy from '../../img/boy.png'
+// import boy from '../../img/boy.png'
 import uzi from '../../img/uzi.png'
 
-import thumbup from '../../img/thumbup.png'
-import Crown from '../../img/crown.png'
-import glassesimoji from '../../img/glassesimoji.png'
-import FloatinDiv from "../FloatinDiv/FloatinDiv";
+// import thumbup from '../../img/thumbup.png'
+// import Crown from '../../img/crown.png'
+// import glassesimoji from '../../img/glassesimoji.png'
+// import FloatinDiv from "../FloatinDiv/FloatinDiv";
 
 import { themeContext } from '../../Context';
 import { useContext } from 'react';
 
-import { Link } from "react-scroll"
+// import { Link } from "react-scroll"
 
 import { Typewriter } from 'react-simple-typewriter'
 
@@ -44,18 +44,18 @@ const Intro = () => {
                     /></span>
                     <span>With a blend of artistry and technical prowess, I transform your visions into visually stunning and highly functional web apps. I thrive on pushing the boundaries of creativity and seamlessly blending it with cutting-edge technology. </span>
                 </div>
-                <a href="tel:+923412445322" target="_blank">
+                <a href="tel:+923412445322" target="_blank" rel="noreferrer">
                     <button className="button i-button">Let's Talk</button>
                 </a>
 
                 <div className="i-icons">
-                    <a href="https://github.com/AliUzair999" target="_blank">
+                    <a href="https://github.com/AliUzair999" target="_blank" rel="noreferrer">
                         <img src={Github} alt="Github" />
                     </a>
-                    <a href="https://www.linkedin.com/in/ali-uzair/" target="_blank">
+                    <a href="https://www.linkedin.com/in/ali-uzair/" target="_blank" rel="noreferrer">
                         <img src={Linkedin} alt="Linkedin" />
                     </a>
-                    <a href="https://www.facebook.com/AliUzairFB" target="_blank">
+                    <a href="https://www.facebook.com/AliUzairFB" target="_blank" rel="noreferrer">
                         <img src={Facebook} alt="Facebook" style={{ color: "var(--orange)" }} />
                     </a>
                 </div>
