@@ -2,7 +2,7 @@ import React from "react";
 import "./Portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import SwiperCore, { Autoplay } from 'swiper';
-import Olx from "../../img/olx.png";
+// import Olx from "../../img/olx.png";
 import AntD from "../../img/portfolio/AntD.PNG";
 import Customers from "../../img/portfolio/Dashboard.png";
 import Gatsby from "../../img/portfolio/Gatsby.PNG";
