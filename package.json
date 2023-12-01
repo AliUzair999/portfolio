@@ -13,6 +13,7 @@
     "framer-motion": "^10.12.16",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.9",
     "react-simple-typewriter": "^5.0.1",
