@@ -3,7 +3,7 @@ import './Intro.css'
 
 import Github from '../../img/github.png'
 import Linkedin from '../../img/linkedin.png'
-import Facebook from '../../img/Facebook.png'
+// import Facebook from '../../img/Facebook.png'
 
 import Vector1 from '../../img/Vector1.png'
 import Vector2 from '../../img/Vector2.png'
@@ -34,7 +34,7 @@ const Intro = () => {
                 <div className="i-name">
                     <span style={darkMode ? { color: "white" } : { color: "" }}>Hey! This Is Ali Uzair</span>
                     <span style={darkMode ? { color: "white" } : { color: "" }} >I am a&nbsp;<Typewriter
-                        words={['MERN Stack Developer', 'Passionate Coder', 'Mobile App  Dev', 'Web Engineer']}
+                        words={['MERN Stack Developer', 'Passionate Coder', 'Enthusiastic Learner', 'Web Engineer']}
                         loop
                         cursor
                         cursorStyle='|'
@@ -55,9 +55,9 @@ const Intro = () => {
                     <a href="https://www.linkedin.com/in/ali-uzair/" target="_blank" rel="noreferrer">
                         <img src={Linkedin} alt="Linkedin" />
                     </a>
-                    <a href="https://www.facebook.com/AliUzairFB" target="_blank" rel="noreferrer">
+                    {/* <a href="https://www.facebook.com/AliUzairFB" target="_blank" rel="noreferrer">
                         <img src={Facebook} alt="Facebook" style={{ color: "var(--orange)" }} />
-                    </a>
+                    </a> */}
                 </div>
 
 

@@ -3,15 +3,17 @@ import "./Portfolio.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import SwiperCore, { Autoplay } from 'swiper';
 // import Olx from "../../img/olx.png";
-import AntD from "../../img/portfolio/AntD.PNG";
+
 import Customers from "../../img/portfolio/Dashboard.png";
 import Gatsby from "../../img/portfolio/Gatsby.PNG";
-import Elo from "../../img/elo.png";
-import realEstate from "../../img/portfolio/realEstate.PNG";
-import LuckyDraw from "../../img/portfolio/luckyDraw.PNG";
-import chatApp from "../../img/portfolio/chatApp.PNG";
-import Food from "../../img/food.png";
-import Reume from "../../img/portfolio.png";
+// import realEstate from "../../img/portfolio/realEstate.PNG";
+import LuckyDraw from "../../img/portfolio/luckyDraw.png";
+// import Resume from "../../img/portfolio.png";
+import Cosmetics from "../../img/portfolio/cosmetics.png"
+import Inncahoots from "../../img/portfolio/inncahoots.png"
+import Mih from "../../img/portfolio/mih.png"
+import Juice from "../../img/portfolio/juice.png"
+import Vapes from "../../img/portfolio/vapes.png"
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,6 +31,23 @@ const Portfolio = () => {
 
   const slides = [
     {
+      name: "Mih",
+      img: Mih,
+      link: "https://marriage-in-heaven-website-roan.vercel.app/",
+      desc: "Banquet Management App",
+    },
+    {
+      name: "Juice",
+      img: Juice,
+      link: "https://sociallyrawcle.com/",
+      desc: "Ecommerce App",
+    },
+    {
+      name: "Vapes",
+      img: Vapes,
+      link: "https://tobaccovapesmart.com/",
+      desc: "Ecommerce App",
+    }, {
       name: "Gatsby",
       img: Gatsby,
       link: "https://uzair-gatsby.netlify.app/",
@@ -40,48 +59,40 @@ const Portfolio = () => {
       link: "https://uzair-strugbits.netlify.app/",
       desc: "Admin Dashboard",
     },
-    {
-      name: "Ant Design",
-      img: AntD,
-      link: "https://uzair-antd.netlify.app/",
-      desc: "Ant Design",
-    },
-    {
-      name: "realEstate",
-      img: realEstate,
-      link: "https://uzair-real-estate.netlify.app/",
-      desc: "Real Estate",
-    },
-    {
-      name: "Elo",
-      img: Elo,
-      link: "https://elo-app.netlify.app/",
-      desc: "Ecommerce App",
-    },
+    // {
+    //   name: "realEstate",
+    //   img: realEstate,
+    //   link: "https://uzair-real-estate.netlify.app/",
+    //   desc: "Real Estate",
+    // },
     {
       name: "LuckyDraw",
       img: LuckyDraw,
       link: "https://uzair-luckydraw.netlify.app/",
       desc: "Luckydraw App",
     },
+
+
     {
-      name: "chatApp",
-      img: chatApp,
-      link: "https://drive.google.com/file/d/1sONVI6pWA8FXlNmJVbptxCUZAHE5K3Nq/view?usp=sharing",
-      desc: "Chat App",
+      name: "Cosmetics",
+      img: Cosmetics,
+      link: "https://nisacosmeticslondon.com/",
+      desc: "Cosmetics Web App",
     },
     {
-      name: "Portfolio",
-      img: Reume,
-      link: "https://github.com/AliUzair999/portfolio",
-      desc: "Portfolio",
+      name: "Inncahoots",
+      img: Inncahoots,
+      link: "https://www.inncahoots.com/listings",
+      desc: "Hotel booking app",
     },
-    {
-      name: "Food App",
-      img: Food,
-      link: "https://restaurant-app-uzair.netlify.app/",
-      desc: "Food Ordering",
-    },
+
+    // {
+    //   name: "Portfolio",
+    //   img: Resume,
+    //   link: "https://github.com/AliUzair999/portfolio",
+    //   desc: "Portfolio",
+    // },
+
   ];
 
   // SwiperCore.use([Autoplay]);
@@ -112,7 +123,7 @@ const Portfolio = () => {
           },
         }}
         spaceBetween={30}
-        
+
         grabCursor={true}
         className="portfolio-slider"
         // centeredSlides={true}

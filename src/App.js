@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 import { themeContext } from "./Context";
 import { useContext } from "react";
 import { Helmet } from "react-helmet";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const theme = useContext(themeContext);
@@ -34,7 +35,9 @@ function App() {
           content="I am a creative MERN stack developer blending innovation with technology. Expert in MongoDB, Express.js, React, and Node.js, ready to tackle web development challenges."
         />
       </Helmet>
-      ;
+
+      <Toaster />
+
       <Navbar />
       <Intro />
       <Services />

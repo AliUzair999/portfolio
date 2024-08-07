@@ -3,10 +3,8 @@ import './Services.css'
 import Card from "../Card/Card";
 
 
-import heartemoji from "../../img/heartemoji.png"
-import glasses from "../../img/glasses.png"
-import humble from "../../img/humble.png"
 import Resume from "./Ali Uzair - CV.pdf"
+
 
 import { themeContext } from '../../Context';
 import { useContext } from 'react';
@@ -39,27 +37,27 @@ const Services = () => {
             <div className="cards">
                 <div style={{ left: "20em" }}>
                     <Card
-                        emoji={humble}
+                        icon="basic"
                         heading="Basics"
-                        detail="HTML, CSS, FLEX, BOOTSTRAP, JAVASCRIPT"
+                        detail="HTML, CSS, FLEX, SASS/SCSS, JAVASCRIPT"
                     />
                 </div>
 
                 {/* SECOND CARD */}
                 <div style={{ top: "12rem" }}>
                     <Card
-                        emoji={glasses}
+                        icon="front"
                         heading="Front-End"
-                        detail="REACT JS, REACT NATIVE, NEXT JS, VUE JS"
+                        detail="REACT JS, NEXT JS, REDUX, TAILWIND CSS, GATSBY"
                     />
                 </div>
 
                 {/* THIRD CARD */}
                 <div style={{ top: "19rem", left: "20em" }}>
                     <Card
-                        emoji={heartemoji}
+                        icon="back"
                         heading="Back-End "
-                        detail="FIREBASE, MONGODB, EXPRESS.JS, NODE.JS"
+                        detail="REST APIs, GRAPH QL, FIREBASE, MONGO DB, EXPRESS JS, NODE JS"
                     />
                 </div>
 

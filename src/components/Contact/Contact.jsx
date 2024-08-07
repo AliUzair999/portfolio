@@ -2,26 +2,38 @@ import React, { useContext, useRef, } from "react";
 import "./Contact.css";
 import emailjs from '@emailjs/browser';
 import { themeContext } from '../../Context';
-
+import toast from "react-hot-toast";
 
 const Contact = () => {
     const theme = useContext(themeContext)
     const darkMode = theme.state.darkMode
-  
+
     const form = useRef();
 
-    
+
 
     const sendEmail = (e) => {
         e.preventDefault();
+        let name = form.current.user_name.value
+        let email = form.current.user_email.value
+        let message = form.current.message.value
+        if (!name || !email || !message) {
+            toast.error("Please include name, email and message to send the form.", { duration: 3000 })
+            return
+        }
 
-        emailjs.sendForm('service_gjwzt16', 'template_fipi78p', form.current, 'PqpNo6_W_azN00qIF')
+        emailjs.sendForm('service_ybbsfrc', 'template_fipi78p', form.current, '--XOS3NIdkryobREt')
             .then((result) => {
-                console.log(result.text);
-                alert("form submitted")
+                // console.log(result.text);
+                // alert("form submitted")
+                toast.success("Form submitted successfully!", { duration: 3000 })
+                form.current.user_name.value = null
+                form.current.user_email.value = null
+                form.current.message.value = null
             }, (error) => {
-                console.log(error.text);
-                alert(error.text)
+                // console.log(error.text);
+                // alert(error.text)
+                toast.error("Oops! Failed to submit the form. Please try again later!", { duration: 3000 })
             });
     };
 
@@ -31,7 +43,7 @@ const Contact = () => {
             <div className="w-left">
                 <div className="awesome">
                     {/* darkMode */}
-                    <span style={darkMode ? {color:"white"} : {color:""}}>Get in Touch</span>
+                    <span style={darkMode ? { color: "white" } : { color: "" }}>Get in Touch</span>
                     <span>Contact me</span>
                     <div
                         className="blur s-blur1"

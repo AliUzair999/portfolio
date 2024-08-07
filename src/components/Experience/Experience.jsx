@@ -12,19 +12,19 @@ const Experience = () => {
     return (
         <div className="experience" id="Experience">
             <div className="achievement">
-                <div className="circle">8+</div>
+                <div className="circle">2+</div>
                 <span style={darkMode ? { color: "white" } : { color: "" }}>Years</span>
                 <span>Experience</span>
             </div>
 
             <div className="achievement">
-                <div className="circle">20+</div>
-                <span style={darkMode ? { color: "white" } : { color: "" }}>Project</span>
+                <div className="circle">18+</div>
+                <span style={darkMode ? { color: "white" } : { color: "" }}>Projects</span>
                 <span>Completed</span>
             </div>
 
             <div className="achievement">
-                <div className="circle">5+</div>
+                <div className="circle">3+</div>
                 <span style={darkMode ? { color: "white" } : { color: "" }}>Companies</span>
                 <span>Worked</span>
             </div>
